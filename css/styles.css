@@ -1,0 +1,133 @@
+body {
+    display: grid;
+    font-family: "Mozilla Text", sans-serif;
+    grid-template-areas:
+    "header titulo"
+    "header contenido"
+    "header footer";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr 40px;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+}
+
+header nav {
+    background-color: #f0f8ff;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 30px 15px;
+    max-width: 300px;
+    width: 100%;
+}
+
+header nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+header nav figure {
+    align-items: center;
+    background-color: #d5ebff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+header nav figure img {
+    height: auto;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+header nav figure figcaption {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 50px 0;
+    padding: 0;
+    width: 100%;
+}
+
+header nav ul li {
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+header nav ul li a {
+    align-items: center;
+    color: #000;
+    display: flex;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+}
+
+header nav ul li span {
+    user-select: none;
+}
+
+header nav ul li a img {
+    width: 40px;
+}
+
+header nav ul li a span {
+    margin-left: 10px;
+}
+
+header nav ul li:hover {
+    background-color: #d9d9d9;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    grid-area: contenido;
+    justify-content: center;
+}
+
+.titulo {
+    align-items: center;
+    background-color: #f0f8ff;
+    display: flex;
+    gap: 15px;
+    grid-area: titulo;
+    justify-content: center;
+    padding: 10px;
+}
+
+.titulo img {
+    width: 40px;
+}
+
+footer {
+    background-color: #f0f8ff;
+    grid-area: footer;
+    text-align: center;
+}
+
+footer p {
+    font-weight: 600;
+}

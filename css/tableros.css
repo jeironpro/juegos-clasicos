@@ -1,0 +1,139 @@
+.contenedor-principal {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.mensaje {
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.mensaje.mensaje-palabra-oculta {
+    width: calc(50px * 6 + 5 * 4px);
+}
+
+.mensaje.mensaje-sudoku {
+    width: calc(50px * 10 + 18px);
+}
+
+.error {
+    color: #e30000;
+}
+
+.exito {
+    color: #008d00;
+}
+
+.aviso {
+    color: #ffb01e;
+}
+
+.tablero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sudoku {
+    gap: 0;
+}
+
+.fila {
+    display: flex;
+    gap: 8px;
+}
+
+.fila-sudoku {
+    gap: 0;
+}
+
+.casilla {
+    border: 2px solid #ccc;
+    font-size: 24px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+}
+
+.casilla-llena {
+    background-color: #e4e4e4;
+}
+
+.invalido {
+    background-color: #ff7777;
+}
+
+.verde {
+    background-color: #43da43;
+}
+
+.amarillo {
+    background-color: #ffd700;
+}
+
+.gris {
+    background-color: #d3d3d3;
+}
+
+/* Teclado móvil */
+.teclado {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.fila-teclado {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.tecla {
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    cursor: pointer;
+    font-size: 1.2em;
+    height: 40px;
+    justify-content: center;
+    padding: 10px;
+    user-select: none;
+    width: 40px;
+}
+
+.tecla.eliminar, 
+.tecla.enviar {
+    width: calc(40px * 2 - 17px);
+}
+
+.tecla:hover {
+    background-color: #ccc;
+}
+
+.borde-superior {
+    border-top: 2px solid black;
+}
+
+.borde-izquierdo {
+    border-left: 2px solid black;
+}
+
+.borde-inferior {
+    border-bottom: 2px solid black;
+}
+
+.borde-derecho {
+    border-right: 2px solid black;
+}
