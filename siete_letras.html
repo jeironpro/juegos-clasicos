@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="icons/letras_7.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/siete_letras.png" type="image/x-icon">
     <title>7 Letras</title>
     <link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/tableros.css">
+    <link rel="stylesheet" href="css/siete_letras.css">
 </head>
 <body>
     <header>
@@ -35,8 +35,8 @@
                     <span class="material-symbols-outlined">keyboard_arrow_right</span>
                 </li>
                 <li class="enlace">
-                    <a href="letras_7.html">
-                        <img src="icons/letras_7.png" alt="Logo del juego 7 letras">
+                    <a href="siete_letras.html">
+                        <img src="icons/siete_letras.png" alt="Logo del juego 7 letras">
                         <span>7 Letras</span>
                     </a>
                     <span class="material-symbols-outlined">keyboard_arrow_right</span>
@@ -59,19 +59,47 @@
         </nav>
     </header>
     <div class="titulo">
-        <img src="icons/letras_7.png" alt="Logo del juego sudoku">
+        <img src="icons/siete_letras.png" alt="Logo del juego 7 letras">
         <h1>7 Letras</h1>
     </div>
     <main>
-        <div class="contenedor-principal">
-            <div class="mensaje" id="mensaje"></div>
-            <div class="tablero letras-7" id="tablero"></div>
-            <div class="teclado" id="teclado"></div>
+        <!-- <div class="en-proceso">No disponible actualmente</div> -->
+        <div class="contenedor-principal-siete-letras">
+            <div class="contenedor-palabra-botones">
+                <div class="mensaje" id="mensaje"></div>
+                <div class="palabra" id="palabra"></div>
+                <div class="botones">
+                    <button class="borrar" id="borrar">Borrar</button>
+                    <button class="cambiar" id="cambiar">Cambiar</button>
+                    <button class="aplicar" id="aplicar">Aplicar</button>
+                </div>
+            </div>
+            <div class="colmena">
+                <div class="fila">
+                    <div class="hexagono lado"></div>
+                    <div class="hexagono lado"></div>
+                </div>
+                <div class="fila">
+                    <div class="hexagono lado"></div>
+                    <div class="hexagono centro" id="centro"></div>
+                    <div class="hexagono lado"></div>
+                </div>
+                <div class="fila">
+                    <div class="hexagono lado"></div>
+                    <div class="hexagono lado"></div>
+                </div>
+            </div>
+            <!-- CONFIGURAR ESTO!!! -->
+            <div class="estadisticas">
+                <h3>Estadisticas</h3>
+                <div class="contador-palabras-validas" id="contador-palabras-validas"></div>
+                <div class="porcentaje" id="porcentaje"></div>
+            </div>
         </div>
     </main>
     <footer>
         <p>&copy; Todos los derechos reservados - JeironPro 2025</p>
     </footer>
-    <script src="js/"></script>
+    <script src="js/siete_letras.js"></script>
 </body>
 </html>

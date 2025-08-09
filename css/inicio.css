@@ -35,7 +35,11 @@ main .contenedor-principal {
 main .contenedor-principal .juego {
     border-radius: 4px;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    padding: 15px 30px;
+    padding: 5px 50px;
+}
+
+main .contenedor-principal .juego:hover {
+    transform: scale(1.05);
 }
 
 main .contenedor-principal .juego a {
@@ -48,7 +52,7 @@ main .contenedor-principal .juego a {
 }
 
 main .contenedor-principal .juego img {
-    width: 80px;
+    width: 70px;
 }
 
 footer {

@@ -90,7 +90,6 @@ function cargarSudoku() {
         })
         .then(sudokus => {
             const id = Math.floor(Math.random() * sudokus.length);
-            console.log("ID: ", id);
             const sudoku = sudokus[id];
 
             tableroCompleto = sudoku.completo;

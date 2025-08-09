@@ -1,12 +1,15 @@
 const filas = 6;
 const columnas = 5;
+const mensaje = document.getElementById("mensaje");
 const tablero = document.getElementById("tablero");
+const contenedorTeclado = document.getElementById("teclado");
+
 let palabraSecreta = "";
 let filaActual = 0;
 let listaPalabras = [];
 let juegoTerminado = false;
 
-fetch("json/palabras_validas.json")
+fetch("json/palabras_ocultas.json")
     .then(respuesta => {
         if (!respuesta.ok) {
             console.log(`Error al cargar las palabras: ${respuesta.status}`);
@@ -34,6 +37,8 @@ for (let i = 0; i < filas; i++) {
         input.classList.add("casilla");
         input.dataset.fila = i;
         input.dataset.columna = j;
+
+        input.disabled = i !== filaActual;
         
         input.addEventListener("input", (e) => {
             e.target.value = e.target.value.replace(/[^a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]/g, "").toLowerCase();
@@ -113,15 +118,23 @@ function verificarFila(numeroFila) {
     }
     fila.forEach(casilla => casilla.disabled = true);
     filaActual += 1;
+
+    if (filaActual < filas) {
+        const siguienteFila = document.querySelectorAll(`.fila:nth-child(${filaActual + 1}) .casilla`);
+
+        siguienteFila.forEach(casilla => casilla.disabled = false);
+
+        if (siguienteFila.length > 0) {
+            siguienteFila[0].focus();
+        }
+    } else {
+        mostrarMensaje(`No has acertado. Palabra oculta: ${palabraSecreta}`, "error");
+        juegoTerminado = true;
+    }
 }
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !juegoTerminado) {
-        if (filaActual >= 6) {
-            mostrarMensaje(`No has acertado. Palabra oculta: ${palabraSecreta}`, "error");
-            juegoTerminado = true;
-            return;
-        }
         verificarFila(filaActual);
 
         const siguienteFila = document.querySelectorAll(`.fila:nth-child(${filaActual + 1}) .casilla`);
@@ -131,8 +144,6 @@ document.addEventListener("keydown", (e) => {
         }
     }
 });
-
-const mensaje = document.getElementById("mensaje");
 
 function mostrarMensaje(texto, tipo = "") {
     mensaje.style.display = "block";
@@ -155,8 +166,6 @@ const teclas = [
     ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ"],
     ["z", "x", "c", "v", "b", "n", "m", "eliminar", "enviar"]
 ];
-
-const contenedorTeclado = document.getElementById("teclado");
 
 teclas.forEach(fila => {
     const filaTeclado = document.createElement("div");

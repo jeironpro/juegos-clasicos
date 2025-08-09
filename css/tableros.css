@@ -1,3 +1,9 @@
+.en-proceso {
+    background-color: #d3d3d3;
+    font-size: 30px;
+    padding: 10px;
+}
+
 .contenedor-principal {
     align-items: center;
     display: flex;
@@ -42,34 +48,18 @@
     gap: 8px;
 }
 
-.sudoku {
-    gap: 0;
-}
-
 .fila {
     display: flex;
     gap: 8px;
 }
 
-.fila-sudoku {
-    gap: 0;
-}
-
 .casilla {
     border: 2px solid #ccc;
     font-size: 24px;
-    height: 50px;
+    height: 40px;
     text-align: center;
     text-transform: uppercase;
-    width: 50px;
-}
-
-.casilla-llena {
-    background-color: #e4e4e4;
-}
-
-.invalido {
-    background-color: #ff7777;
+    width: 40px;
 }
 
 .verde {
@@ -84,7 +74,6 @@
     background-color: #d3d3d3;
 }
 
-/* Teclado móvil */
 .teclado {
     display: flex;
     flex-direction: column;
@@ -136,4 +125,25 @@
 
 .borde-derecho {
     border-right: 2px solid black;
+}
+
+/* Sudoku individual */
+.sudoku {
+    gap: 0;
+}
+
+.fila-sudoku {
+    gap: 0;
+}
+
+.casilla-llena {
+    background-color: #e4e4e4;
+}
+
+.invalido {
+    background-color: #ff7777;
+}
+
+@media (max-width: 768px) {
+    
 }

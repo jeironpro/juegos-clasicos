@@ -1,0 +1,121 @@
+.contenedor-principal-siete-letras {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+}
+
+
+.error {
+    color: #e30000;
+    z-index: 1000;
+}
+
+.exito {
+    color: #008d00;
+    z-index: 1000;
+}
+
+.aviso {
+    color: #ffb01e;
+    z-index: 1000;
+}
+
+.contenedor-palabra-botones {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor-palabra-botones .palabra {
+    align-items: center;
+    background-color: #e7e7e7;
+    border-radius: 4px;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width: 350px;
+}
+
+.contenedor-palabra-botones .botones {
+    align-items: center;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.contenedor-palabra-botones .botones button {
+    background: transparent;
+    border: 1px dashed #000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.contenedor-palabra-botones .botones button:hover {
+    transform: scale(1.15);
+}
+
+.contenedor-palabra-botones .botones .borrar:hover {
+    background-color: #ff8f8f;
+}
+
+.contenedor-palabra-botones .botones .cambiar:hover {
+    background-color: #8fceff;
+}
+
+.contenedor-palabra-botones .botones .aplicar:hover {
+    background-color: #95ff8f;
+}
+
+.colmena {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.fila {
+    display: flex;
+}
+
+.hexagono {
+    align-items: center;
+    background-color: #87ceeb;
+    clip-path: polygon(
+        50% 0%,
+        90% 25%,
+        90% 75%,
+        50% 100%,
+        10% 75%,
+        10% 25%
+    );
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 700;
+    height: 110px;
+    justify-content: center;
+    width: 130px;
+}
+
+.hexagono:hover {
+    transform: scale(1.15);
+}
+
+.centro {
+    background-color: #1e90ff;
+}
+
+.letra {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+}
